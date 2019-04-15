@@ -1,0 +1,9 @@
+
+    Filter(
+        Search('Project Checklist',
+        SearchBox.Text,
+        "Project"),
+        User.DisplayName = User().FullName)
+        
+
+
