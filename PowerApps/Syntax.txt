@@ -1,0 +1,8 @@
+Syntax for form for if statements on Equipment.
+
+Switch(DataCardValue6.Selected.Value,"Melbourne",Switch(DataCardValue3.Selected.Value ,"Laptop",["MEL-SURFLAP-01","MEL-SURFLAP-02","MEL-SURFLAP-03","MEL-SURFLAP-04","MEL-SURFLAP-05"],
+"Tablet",["MEL-iPad-01","MEL-iPad-02","MEL-iPad-03","MEL-iPad-04","MEL-iPad-05"] ),"Sydney",Switch(DataCardValue3.Selected.Value ,"Laptop",["SYD-SURFLAP-01","SYD-SURFLAP-02","SYD-SURFLAP-03","SYD-SURFLAP-04","SYD-SURFLAP-05"],
+"Tablet",["SYD-iPad-01","SYD-iPad-02","SYD-iPad-03","SYD-iPad-04","SYDMEL-iPad-05"] ))
+
+
+
