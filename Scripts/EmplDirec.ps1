@@ -46,14 +46,19 @@ $users = $OU | foreach {Get-ADUser -Filter * -Properties Office,OfficePhone -Sea
  foreach($values in $Users )
  {
 
-Add-PnPListItem -List "Staff Directory" -ContentType $values.ContentType`
+$id = Add-PnPListItem -List "Staff Directory" -ContentType $values.ContentType`
  -Values @{
  "Staff" = $values.Name; 
  "Office" =$values.office; 
  "Code" = $values.samaccountname;
- "PhoneNumber" = $value.OfficePhone;
 
  
  }
+ Set-PnPListItem -List "Staff Directory" `
+-Identity $id.Id `
+-Values @{
+ "Phone" = $value.OfficePhone;
+ "Position" = $values.description;
 
+ }
 }
